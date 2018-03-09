@@ -16,29 +16,31 @@
     <div class="container">
 
       <div id="inputs">
-        <input id="firstName" type="text" placeholder="First Name">
-        <input id="lastName" type="text" placeholder="Last Name">
-        <input id="idNumber" type="text" placeholder="ID">
-        <input id="jobTitle" type="text" placeholder="Job Title">
-        <input id="salary" type="text" placeholder="Salary">
+        <input class='input' id="firstName" type="text" placeholder="First Name">
+        <input class='input' id="lastName" type="text" placeholder="Last Name">
+        <input class='input' id="idNumber" type="text" placeholder="ID">
+        <input class='input' id="jobTitle" type="text" placeholder="Job Title">
+        <input class='input' id="salary" type="text" placeholder="Salary">
         <button id="submit">Submit</button>
       </div>
     </br>
 
       <div id='table'>
         <table id="employeeTable" style="width:100%">
-          <th>
-            <tr><td>First Name</td>
-            <td>Last Name</td>
-            <td>ID</td>
-            <td>Job Title</td>
-            <td>Annual Salary</tr></td>
-          </th>
+            <th>
+              <tr>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>ID</td>
+                <td>Job Title</td>
+                <td>Annual Salary</td>
+              </tr>
+            </th>
         </table>
    </div>
 
-   <div id="totalMoney">
-        <h2> Total Monthly: </h2>
+   <div>
+        <h2 id="totalMoney"> Total Monthly: </h2>
     </div>
 
 </body>
