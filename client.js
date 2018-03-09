@@ -17,8 +17,7 @@ function addEmployee(){
   let id = $('#idNumber').val();
   let title = $('#jobTitle').val();
   let annualSalary = $('#salary').val();
-  let tableRow = ('<tr><td>' + fName + '</td><td>' + lName + '</td><td>' + id + '</td><td>' +title + '</td)<td>' + annualSalary + '</td></tr>');
-  console.log(tableRow);
-
+  let tableRow = ('<tr><td>' + fName + '</td><td>' + lName + '</td><td>' +
+                  id + '</td><td>' +title + '</td><td>' + annualSalary + '</td></tr>');
   $('#employeeTable').append(tableRow);
 }

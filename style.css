@@ -7,3 +7,9 @@ table, tr, td {
    border: 1px solid black;
    text-align: center;
 }
+
+#employeeTable{
+  border-collapse: collapse;
+  border: 1px solid black;
+  text-align: center;
+}
