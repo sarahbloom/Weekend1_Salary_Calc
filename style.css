@@ -1,15 +1,32 @@
+body{
+  padding: 0;
+  margin: 0;
+  background-color: #e3ebf7;
+  }
+
 h1{
   font-family: Impact;
+  font-size: 60px;
+  text-align: center;
 }
 
-table, tr, td {
-   border-collapse: collapse;
-   border: 1px solid black;
-   text-align: center;
-}
-
-#employeeTable{
+#employeeTable, th, td {
   border-collapse: collapse;
   border: 1px solid black;
   text-align: center;
+}
+
+#header{
+  height:150px;
+  background-color: #4e9191;
+  padding-top: 10px;
+}
+th{
+  padding: 0;
+  margin: 0;
+}
+
+th, td {
+  height: 20px;
+  background-color: #99b8e8;
 }
