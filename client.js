@@ -34,9 +34,9 @@ function totalSalaries(x) {
     }
       let monthlyPayment = payment/12;{
       console.log(monthlyPayment);
-      $('#totalMoney').text('Total Monthly Payment: $' + monthlyPayment.toFixed( 2 ));
+      $('#totalMoney').text('Total Monthly Payment: $' + monthlyPayment.toFixed(2));
       }
         if ( monthlyPayment > 20000 ){
-        $('#totalMoney').css('color', 'red ');
+        $('#total').css('background-color', 'red ');
         }
 }
