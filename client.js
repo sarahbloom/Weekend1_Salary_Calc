@@ -2,13 +2,30 @@
 
 console.log('js');
 let salaries = [];
+let employeeArray = [];
 let totalMonthlySalary;
+class Employee {
+  constructor(fNameIn, lNameIn, idIn, titleIn, annualSalaryIn) {
+    this.fName = fNameIn;
+    this.lName = lNameIn;
+    this.id = idIn;
+    this.title = titleIn;
+    this.annualSalary = annualSalaryIn;
+  }
+}
+
+const employee1 = new Employee('Jessica', 'Jones', '234', "detective", '48000');
+const employee2 = new Employee('Mary', 'Poppins', '1882', 'nanny', '36000');
+const employee3 = new Employee('Charlie', 'Brown', '2346', 'teacher', '36000');
+const employee4 = new Employee('Jack', 'Sprat', '980', 'cook', '360000');
+
 $(document).ready(readyNow); {}
 
 function readyNow() {
   console.log("JQ");
   $('#submit').on('click', addEmployee);
   $('#delete').on('click', removeEmployee);
+  addToArray();
 }
 
 function addEmployee() {
@@ -25,21 +42,26 @@ function addEmployee() {
   $('#employeeTable').append(tableRow);
   $('.input').val('');
   totalSalaries(salaries);
+
+
+}
+
+function addToArray(){
+  employeeArray.push($(new Employee));
 }
 
 function totalSalaries(salaryArray) {
   let payment = 0;
   for (let i = 0; i < salaryArray.length; i++) {
     payment += salaryArray[i];
-    console.log(payment);
-    }
-      let monthlyPayment = payment/12;{
-      console.log(monthlyPayment);
-      $('#totalMoney').text('Total Monthly Payment: $' + monthlyPayment.toFixed(2));
-      }
-        if ( monthlyPayment > 20000 ){
-        $('#total').css('background-color', 'red ');
-        }
+  }
+  let monthlyPayment = payment / 12; {
+    console.log(monthlyPayment);
+    $('#totalMoney').text('Total Monthly Payment: $' + monthlyPayment.toFixed(2));
+  }
+  if (monthlyPayment > 20000) {
+    $('#total').css('background-color', 'red ');
+  }
 }
 
 function removeEmployee() {
