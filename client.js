@@ -32,7 +32,11 @@ function totalSalaries(x) {
     payment += x[i];
     console.log(payment);
     }
-      let monthlyPayment = payment/12;
+      let monthlyPayment = payment/12;{
       console.log(monthlyPayment);
-      //$('#totalMoney').text('Total Monthly: ', monthlyPayment);
-  }
+      $('#totalMoney').text('Total Monthly Payment: $' + monthlyPayment.toFixed( 2 ));
+      }
+        if ( monthlyPayment > 20000 ){
+        $('#totalMoney').css('color', 'red ');
+        }
+}
