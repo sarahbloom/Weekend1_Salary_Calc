@@ -8,6 +8,7 @@ $(document).ready(readyNow); {}
 function readyNow() {
   console.log("JQ");
   $('#submit').on('click', addEmployee);
+  $('#delete').on('click', removeEmployee);
 }
 
 function addEmployee() {
@@ -26,10 +27,10 @@ function addEmployee() {
   totalSalaries(salaries);
 }
 
-function totalSalaries(x) {
+function totalSalaries(salaryArray) {
   let payment = 0;
-  for (let i = 0; i < x.length; i++) {
-    payment += x[i];
+  for (let i = 0; i < salaryArray.length; i++) {
+    payment += salaryArray[i];
     console.log(payment);
     }
       let monthlyPayment = payment/12;{
@@ -39,4 +40,9 @@ function totalSalaries(x) {
         if ( monthlyPayment > 20000 ){
         $('#total').css('background-color', 'red ');
         }
+}
+
+function removeEmployee() {
+  console.log('in remove employee');
+  $("#table tr:last").remove();
 }

@@ -1,13 +1,14 @@
 body{
   padding: 0;
   margin: 0;
-  background-color: #e3ebf7;
+  background-color: #e1e3e8;
   }
 
 h1{
   font-family: Impact;
   font-size: 60px;
   text-align: center;
+  color: #e3ecf9;
 }
 
 #employeeTable, th, td {
@@ -21,12 +22,19 @@ h1{
   background-color: #4e9191;
   padding-top: 10px;
 }
-th{
+
+th {
   padding: 0;
   margin: 0;
-}
-
-th, td {
   height: 20px;
   background-color: #99b8e8;
+}
+
+tr, td{
+  background-color: #c0d6f7;
+}
+
+#totalMoney{
+  font-family: Impact;
+  color: #4a4f56;
 }
