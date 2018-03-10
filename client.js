@@ -5,12 +5,12 @@ let salaries = [];
 let employeeArray = [];
 let totalMonthlySalary;
 class Employee {
-  constructor(fNameIn, lNameIn, idIn, titleIn, annualSalaryIn) {
-    this.fName = fNameIn;
-    this.lName = lNameIn;
-    this.id = idIn;
-    this.title = titleIn;
-    this.annualSalary = annualSalaryIn;
+  constructor(fName, lName, id, title, annualSalary) {
+    this.fName = fName;
+    this.lName = lName;
+    this.id = id;
+    this.title = title;
+    this.annualSalary = annualSalary;
   }
 }
 
@@ -25,7 +25,6 @@ function readyNow() {
   console.log("JQ");
   $('#submit').on('click', addEmployee);
   $('#delete').on('click', removeEmployee);
-  addToArray();
 }
 
 function addEmployee() {
@@ -42,14 +41,20 @@ function addEmployee() {
   $('#employeeTable').append(tableRow);
   $('.input').val('');
   totalSalaries(salaries);
-
-
+  console.log(fName);
+  addToArray(fName, lName, id, title, annualSalary);
 }
 
-function addToArray(){
-  employeeArray.push($(new Employee));
+function addToArray(fName, lName, id, title, annualSalary) {
+  let addedEmployee = new Employee(fName, lName, id, title, annualSalary);
+  console.log(addedEmployee);
+  employeeArray.push($(addedEmployee));
 }
 
+function removeEmployee() {
+  console.log('in remove employee');
+  $("#table tr:last").remove();
+}
 function totalSalaries(salaryArray) {
   let payment = 0;
   for (let i = 0; i < salaryArray.length; i++) {
@@ -62,9 +67,4 @@ function totalSalaries(salaryArray) {
   if (monthlyPayment > 20000) {
     $('#total').css('background-color', 'red ');
   }
-}
-
-function removeEmployee() {
-  console.log('in remove employee');
-  $("#table tr:last").remove();
 }
